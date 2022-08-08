@@ -1,0 +1,25 @@
+====
+Home
+====
+
+.. toctree::
+   :hidden:
+
+   self
+
+.. toctree::
+   :caption: Getting started:
+
+   README.md
+
+.. toctree::
+   :maxdepth: 5
+   :caption: Components:
+   :glob:
+
+   conx_cli_tools/components.rst
+
+.. toctree::
+   :caption: Getting started:
+
+   README.md

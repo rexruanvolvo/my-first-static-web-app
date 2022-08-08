@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>conx_cli_tools.lib.osb_handler &mdash; 7-cip 0.1 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> 7-cip
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">Home</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html">CONX-CLI-TOOLS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html#introduction">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html#actions">Actions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Components:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html">conx_cli_tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#azure-sync">azure_sync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#git">git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#healthchecker">healthchecker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#lib">lib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#osb">osb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#power">power</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#robot">robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#setup-environment">setup_environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#snok">snok</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#sut-log">sut_log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#swut">swut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#update-sut">update_sut</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html">CONX-CLI-TOOLS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html#introduction">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html#actions">Actions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">7-cip</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      <li>conx_cli_tools.lib.osb_handler</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for conx_cli_tools.lib.osb_handler</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">OSB Handler</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">conx_cli_tools.lib.integration_manifest_handler</span> <span class="kn">import</span> <span class="n">IntegrationManifestHandler</span>
+<span class="kn">from</span> <span class="nn">conx_cli_tools.lib.docker_runner</span> <span class="kn">import</span> <span class="n">docker_exec</span>
+
+
+<span class="n">LOGGER</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">LOGGER</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+
+<span class="n">CONTAINER_NAME</span> <span class="o">=</span> <span class="s2">&quot;osb_container&quot;</span>
+
+
+<div class="viewcode-block" id="OSBHandlerException"><a class="viewcode-back" href="../../../conx_cli_tools/components.html#conx_cli_tools.lib.osb_handler.OSBHandlerException">[docs]</a><span class="k">class</span> <span class="nc">OSBHandlerException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;OSB Handler Exception&quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="OSBHandler"><a class="viewcode-back" href="../../../conx_cli_tools/components.html#conx_cli_tools.lib.osb_handler.OSBHandler">[docs]</a><span class="k">class</span> <span class="nc">OSBHandler</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;OSB handler&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="OSBHandler.confighub_swdl"><a class="viewcode-back" href="../../../conx_cli_tools/components.html#conx_cli_tools.lib.osb_handler.OSBHandler.confighub_swdl">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">confighub_swdl</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Method to call OSB to software download.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">args</span><span class="o">.</span><span class="n">integration_manifest</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">args</span><span class="o">.</span><span class="n">baselines</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">OSBHandlerException</span><span class="p">(</span><span class="s1">&#39;You need to provide either integration manifest or baselines&#39;</span><span class="p">)</span>
+        <span class="n">baselines</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">integration_manifest</span><span class="p">:</span>
+            <span class="n">baselines</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">IntegrationManifestHandler</span><span class="o">.</span><span class="n">get_baselines_from_manifest</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">integration_manifest</span><span class="p">))</span>
+        <span class="n">baselines</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">baselines</span> <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">baselines</span> <span class="k">else</span> <span class="p">[])</span>
+        <span class="n">baselines_str</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="n">baselines</span><span class="p">))</span>
+        <span class="c1"># should we move customized testobject_config into the default path for testobject_config</span>
+        <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/App/OSB confighub_swdl --testobject_config </span><span class="si">{</span><span class="n">args</span><span class="o">.</span><span class="n">workspace</span><span class="si">}</span><span class="s2">/test-object-config.json&quot;</span>
+        <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">command</span><span class="si">}</span><span class="s2"> --confighub_user </span><span class="si">{</span><span class="n">args</span><span class="o">.</span><span class="n">confighub_user</span><span class="si">}</span><span class="s2"> --confighub_password </span><span class="si">{</span><span class="n">args</span><span class="o">.</span><span class="n">confighub_password</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">command</span><span class="si">}</span><span class="s2"> --artifactory_user </span><span class="si">{</span><span class="n">args</span><span class="o">.</span><span class="n">artifactory_username</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">command</span><span class="si">}</span><span class="s2"> --artifactory_password </span><span class="si">{</span><span class="n">args</span><span class="o">.</span><span class="n">artifactory_apikey</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">command</span><span class="si">}</span><span class="s2"> --baseline </span><span class="si">{</span><span class="n">baselines_str</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">ip_address</span><span class="p">:</span>
+            <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">command</span><span class="si">}</span><span class="s2"> --ip_address </span><span class="si">{</span><span class="n">args</span><span class="o">.</span><span class="n">ip_address</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;result_folder&quot;</span><span class="p">):</span>
+            <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">command</span><span class="si">}</span><span class="s2"> --log_dir </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;result_folder&#39;</span><span class="p">),</span> <span class="s1">&#39;osb&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">await</span> <span class="n">docker_exec</span><span class="p">(</span>
+            <span class="n">container_name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">CONTAINER_NAME</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="n">command</span><span class="o">=</span><span class="n">command</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="OSBHandler.diagnostics_command"><a class="viewcode-back" href="../../../conx_cli_tools/components.html#conx_cli_tools.lib.osb_handler.OSBHandler.diagnostics_command">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">diagnostics_command</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Method to call OSB to send diagnostics command.&quot;&quot;&quot;</span>
+        <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/App/OSB diagnostics_command --ecu_address </span><span class="si">{</span><span class="n">args</span><span class="o">.</span><span class="n">ecu_address</span><span class="si">}</span><span class="s2"> --request </span><span class="si">{</span><span class="n">args</span><span class="o">.</span><span class="n">request</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">command</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">ip_address</span><span class="p">:</span>
+            <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">command</span><span class="si">}</span><span class="s2"> --ip_address </span><span class="si">{</span><span class="n">args</span><span class="o">.</span><span class="n">ip_address</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;result_folder&quot;</span><span class="p">):</span>
+            <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">command</span><span class="si">}</span><span class="s2"> --log_dir </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;result_folder&#39;</span><span class="p">),</span> <span class="s1">&#39;osb&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">await</span> <span class="n">docker_exec</span><span class="p">(</span>
+            <span class="n">container_name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">CONTAINER_NAME</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="n">command</span><span class="o">=</span><span class="n">command</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        <span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022 – Volvo Cars.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

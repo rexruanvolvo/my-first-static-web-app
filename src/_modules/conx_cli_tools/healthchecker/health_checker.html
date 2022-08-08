@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>conx_cli_tools.healthchecker.health_checker &mdash; 7-cip 0.1 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> 7-cip
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">Home</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html">CONX-CLI-TOOLS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html#introduction">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html#actions">Actions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Components:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html">conx_cli_tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#azure-sync">azure_sync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#git">git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#healthchecker">healthchecker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#lib">lib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#osb">osb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#power">power</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#robot">robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#setup-environment">setup_environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#snok">snok</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#sut-log">sut_log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#swut">swut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#update-sut">update_sut</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html">CONX-CLI-TOOLS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html#introduction">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html#actions">Actions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">7-cip</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      <li>conx_cli_tools.healthchecker.health_checker</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for conx_cli_tools.healthchecker.health_checker</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Python script to run health check on robot_client.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">conx_cli_tools.lib.call</span> <span class="kn">import</span> <span class="n">call</span><span class="p">,</span> <span class="n">call_pipe</span>
+
+
+<span class="n">TIMEOUT_TIME</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">PAUSE_TIME</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">WAIT_TIME</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">N_TRIES</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">ERROR_EXEC_STR</span> <span class="o">=</span> <span class="s2">&quot;raising: __main__.HealthCheckerException: &quot;</span>
+<span class="n">ERROR_MSG_UNHEALTHY</span> <span class="o">=</span> <span class="s2">&quot;docker-compose is unhealthy.&quot;</span>
+<span class="n">ERROR_MSG_STARTING</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;docker-compose state is starting, docker-compose up took too long.&quot;</span>
+<span class="p">)</span>
+<span class="n">ERROR_MSG_TIMEOUT</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;Could not read docker-compose status due to process.communicate() timed out.&quot;</span>
+<span class="p">)</span>
+<span class="n">ERROR_MSG_OTHER</span> <span class="o">=</span> <span class="s2">&quot;docker-compose is &quot;</span>
+
+<span class="n">LOG_FILE_NAME</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;result_folder&quot;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()),</span> <span class="s2">&quot;healthcheck.log&quot;</span>
+<span class="p">)</span>
+<span class="n">PREV_WORKDIR</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+<span class="n">CYNOSURE_SERVICES_PATH</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;CYNOSURE_SERVICES_PATH&quot;</span><span class="p">)</span>
+<span class="n">ENVIRONMENT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;ENVIRONMENT&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">CONTAINER_NAME</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;robot_client_</span><span class="si">{</span><span class="n">ENVIRONMENT</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">if</span> <span class="n">ENVIRONMENT</span> <span class="k">else</span> <span class="s1">&#39;robot_client&#39;</span>
+
+
+<div class="viewcode-block" id="HealthCheckerException"><a class="viewcode-back" href="../../../conx_cli_tools/components.html#conx_cli_tools.healthchecker.health_checker.HealthCheckerException">[docs]</a><span class="k">class</span> <span class="nc">HealthCheckerException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Health checker exception&quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="docker_compose_restart"><a class="viewcode-back" href="../../../conx_cli_tools/components.html#conx_cli_tools.healthchecker.health_checker.docker_compose_restart">[docs]</a><span class="k">async</span> <span class="k">def</span> <span class="nf">docker_compose_restart</span><span class="p">():</span>
+    <span class="k">await</span> <span class="n">call</span><span class="p">(</span><span class="s2">&quot;docker-compose --profile tools restart&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="docker_inspect"><a class="viewcode-back" href="../../../conx_cli_tools/components.html#conx_cli_tools.healthchecker.health_checker.docker_inspect">[docs]</a><span class="k">async</span> <span class="k">def</span> <span class="nf">docker_inspect</span><span class="p">():</span>
+    <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span> <span class="o">=</span> <span class="k">await</span> <span class="n">call_pipe</span><span class="p">(</span>  <span class="c1"># pylint: disable=unused-variable</span>
+        <span class="s1">&#39;docker inspect --format &quot;{{json .State.Health.Status }}&quot; &#39;</span> <span class="o">+</span> <span class="n">CONTAINER_NAME</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">_format_health_string</span><span class="p">(</span><span class="n">stdout</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="save_str_to_logs"><a class="viewcode-back" href="../../../conx_cli_tools/components.html#conx_cli_tools.healthchecker.health_checker.save_str_to_logs">[docs]</a><span class="k">def</span> <span class="nf">save_str_to_logs</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">LOG_FILE_NAME</span><span class="p">,</span> <span class="s2">&quot;a+&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">log</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="save_docker_logs"><a class="viewcode-back" href="../../../conx_cli_tools/components.html#conx_cli_tools.healthchecker.health_checker.save_docker_logs">[docs]</a><span class="k">async</span> <span class="k">def</span> <span class="nf">save_docker_logs</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function to save docker logs</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">save_str_to_logs</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">save_str_to_logs</span><span class="p">(</span><span class="s2">&quot;Running docker-compose logs -t&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">call</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;docker-compose logs -t &gt;&gt; </span><span class="si">{</span><span class="n">LOG_FILE_NAME</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">save_str_to_logs</span><span class="p">(</span>
+        <span class="s1">&#39;Running docker inspect --format &quot;{{json .State.Health }}&quot; &#39;</span> <span class="o">+</span> <span class="n">CONTAINER_NAME</span>
+    <span class="p">)</span>
+    <span class="k">await</span> <span class="n">call</span><span class="p">(</span>
+        <span class="s1">&#39;docker inspect --format &quot;{{json .State.Health }}&quot;&#39;</span>
+        <span class="sa">f</span><span class="s2">&quot; </span><span class="si">{</span><span class="n">CONTAINER_NAME</span><span class="si">}</span><span class="s2"> | jq . | cat &gt;&gt; </span><span class="si">{</span><span class="n">LOG_FILE_NAME</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span>
+    <span class="n">save_str_to_logs</span><span class="p">(</span><span class="s2">&quot;Running docker-compose ps&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">call</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;docker-compose ps | cat &gt;&gt; </span><span class="si">{</span><span class="n">LOG_FILE_NAME</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">save_str_to_logs</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">_format_health_string</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+    <span class="n">string</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+    <span class="n">string</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">string</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">)</span>
+    <span class="n">string</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">string</span>
+
+
+<div class="viewcode-block" id="health_check"><a class="viewcode-back" href="../../../conx_cli_tools/components.html#conx_cli_tools.healthchecker.health_checker.health_check">[docs]</a><span class="k">async</span> <span class="k">def</span> <span class="nf">health_check</span><span class="p">():</span>
+
+    <span class="n">health</span> <span class="o">=</span> <span class="k">await</span> <span class="n">docker_inspect</span><span class="p">()</span>
+    <span class="n">loops_tot</span> <span class="o">=</span> <span class="n">WAIT_TIME</span> <span class="o">//</span> <span class="n">PAUSE_TIME</span>
+    <span class="n">n_loops</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;What was the health? It was </span><span class="si">{</span><span class="n">health</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="k">while</span> <span class="n">health</span> <span class="o">!=</span> <span class="s2">&quot;healthy&quot;</span> <span class="ow">and</span> <span class="n">n_loops</span> <span class="o">!=</span> <span class="n">loops_tot</span><span class="p">:</span>
+        <span class="n">save_str_to_logs</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Waited </span><span class="si">{</span><span class="n">n_loops</span><span class="o">*</span><span class="n">PAUSE_TIME</span><span class="si">}</span><span class="s2"> seconds, current status is </span><span class="si">{</span><span class="n">health</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">PAUSE_TIME</span><span class="p">)</span>
+        <span class="n">n_loops</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">health</span> <span class="o">=</span> <span class="k">await</span> <span class="n">docker_inspect</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">health</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;unhealthy&quot;</span><span class="p">,</span> <span class="s2">&quot;process.communicate() timed out.&quot;</span><span class="p">):</span>
+            <span class="k">break</span>
+    <span class="k">return</span> <span class="n">health</span></div>
+
+
+<div class="viewcode-block" id="ensure_healthy_status"><a class="viewcode-back" href="../../../conx_cli_tools/components.html#conx_cli_tools.healthchecker.health_checker.ensure_healthy_status">[docs]</a><span class="k">async</span> <span class="k">def</span> <span class="nf">ensure_healthy_status</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N_TRIES</span><span class="p">):</span>
+        <span class="n">save_str_to_logs</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Try number </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">N_TRIES</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">health</span> <span class="o">=</span> <span class="k">await</span> <span class="n">health_check</span><span class="p">()</span>
+        <span class="k">await</span> <span class="n">save_docker_logs</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">health</span> <span class="o">==</span> <span class="s2">&quot;healthy&quot;</span><span class="p">:</span>
+            <span class="n">save_str_to_logs</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The robot client is </span><span class="si">{</span><span class="n">health</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">break</span>
+        <span class="k">if</span> <span class="n">health</span> <span class="o">==</span> <span class="s2">&quot;unhealthy&quot;</span><span class="p">:</span>
+            <span class="n">save_str_to_logs</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">CONTAINER_NAME</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">health</span><span class="si">}</span><span class="s2"> after </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2"> tries.&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">!=</span> <span class="n">N_TRIES</span><span class="p">:</span>
+                <span class="n">save_str_to_logs</span><span class="p">(</span><span class="s2">&quot;Running docker-compose restart&quot;</span><span class="p">)</span>
+                <span class="k">await</span> <span class="n">docker_compose_restart</span><span class="p">()</span>
+    <span class="k">await</span> <span class="n">stdout_outcome</span><span class="p">(</span><span class="n">health</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="stdout_outcome"><a class="viewcode-back" href="../../../conx_cli_tools/components.html#conx_cli_tools.healthchecker.health_checker.stdout_outcome">[docs]</a><span class="k">async</span> <span class="k">def</span> <span class="nf">stdout_outcome</span><span class="p">(</span><span class="n">health</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function return outcome to stdout</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">health</span> <span class="o">==</span> <span class="s2">&quot;healthy&quot;</span><span class="p">:</span>
+        <span class="n">save_str_to_logs</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;docker-compose is </span><span class="si">{</span><span class="n">health</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span>  <span class="c1"># return to not raise error if healthy</span>
+    <span class="n">save_str_to_logs</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Raise exception due to state: </span><span class="si">{</span><span class="n">health</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">health</span> <span class="o">==</span> <span class="s2">&quot;unhealthy&quot;</span><span class="p">:</span>
+        <span class="n">save_str_to_logs</span><span class="p">(</span><span class="n">ERROR_EXEC_STR</span> <span class="o">+</span> <span class="n">ERROR_MSG_UNHEALTHY</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">HealthCheckerException</span><span class="p">(</span><span class="n">ERROR_MSG_UNHEALTHY</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">health</span> <span class="o">==</span> <span class="s2">&quot;starting&quot;</span><span class="p">:</span>
+        <span class="n">save_str_to_logs</span><span class="p">(</span><span class="n">ERROR_EXEC_STR</span> <span class="o">+</span> <span class="n">ERROR_MSG_STARTING</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">HealthCheckerException</span><span class="p">(</span><span class="n">ERROR_MSG_STARTING</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">health</span> <span class="o">==</span> <span class="s2">&quot;process.communicate() timed out.&quot;</span><span class="p">:</span>
+        <span class="n">save_str_to_logs</span><span class="p">(</span><span class="n">ERROR_EXEC_STR</span> <span class="o">+</span> <span class="n">ERROR_MSG_TIMEOUT</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">HealthCheckerException</span><span class="p">(</span><span class="n">ERROR_MSG_TIMEOUT</span><span class="p">)</span>
+    <span class="n">save_str_to_logs</span><span class="p">(</span><span class="n">ERROR_EXEC_STR</span> <span class="o">+</span> <span class="n">ERROR_MSG_OTHER</span> <span class="o">+</span> <span class="n">health</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="n">HealthCheckerException</span><span class="p">(</span><span class="n">ERROR_MSG_OTHER</span> <span class="o">+</span> <span class="n">health</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="run_health_check"><a class="viewcode-back" href="../../../conx_cli_tools/components.html#conx_cli_tools.healthchecker.health_checker.run_health_check">[docs]</a><span class="k">async</span> <span class="k">def</span> <span class="nf">run_health_check</span><span class="p">():</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">CYNOSURE_SERVICES_PATH</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">ensure_healthy_status</span><span class="p">()</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">PREV_WORKDIR</span><span class="p">)</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022 – Volvo Cars.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

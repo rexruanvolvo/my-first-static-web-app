@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>conx_cli_tools.robot.update_vars_file &mdash; 7-cip 0.1 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> 7-cip
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">Home</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html">CONX-CLI-TOOLS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html#introduction">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html#actions">Actions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Components:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html">conx_cli_tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#azure-sync">azure_sync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#git">git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#healthchecker">healthchecker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#lib">lib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#osb">osb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#power">power</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#robot">robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#setup-environment">setup_environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#snok">snok</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#sut-log">sut_log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#swut">swut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conx_cli_tools/components.html#update-sut">update_sut</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html">CONX-CLI-TOOLS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html#introduction">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html#actions">Actions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">7-cip</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      <li>conx_cli_tools.robot.update_vars_file</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for conx_cli_tools.robot.update_vars_file</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Update vars file</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">yaml</span>
+
+<span class="c1"># set default values</span>
+<span class="n">PHYSICAL_ECUS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;VCU&#39;</span><span class="p">,</span> <span class="s1">&#39;VIU_D&#39;</span><span class="p">,</span> <span class="s1">&#39;VIU_P&#39;</span><span class="p">,</span> <span class="s1">&#39;LPC&#39;</span><span class="p">,</span> <span class="s1">&#39;DHU&#39;</span><span class="p">,</span> <span class="s1">&#39;DIM_D&#39;</span><span class="p">,</span> <span class="s1">&#39;CSD&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;AUD&#39;</span><span class="p">,</span> <span class="s1">&#39;TCAM&#39;</span><span class="p">]</span>
+<span class="n">CONFIG_ETH_SWITCH_IP</span> <span class="o">=</span> <span class="s1">&#39;169.254.4.12&#39;</span>
+<span class="n">CONFIG_ALIARO_IP</span> <span class="o">=</span> <span class="s1">&#39;192.168.1.149&#39;</span>
+<span class="n">CONFIG_DHUM_COM_PORT</span> <span class="o">=</span> <span class="s1">&#39;/dev/DHUM_COM_PORT&#39;</span>
+<span class="n">CONFIG_DHUH_COM_PORT</span> <span class="o">=</span> <span class="s1">&#39;/dev/DHUH_COM_PORT&#39;</span>
+<span class="n">CONFIG_SGA_DLT_PORT</span> <span class="o">=</span> <span class="mi">3490</span>
+<span class="n">CONFIG_HPA_DLT_PORT</span> <span class="o">=</span> <span class="mi">3491</span>
+<span class="n">CONFIG_TCA_DLT_PORT</span> <span class="o">=</span> <span class="mi">3492</span>
+<span class="n">CONFIG_DHU_DLT_PORT</span> <span class="o">=</span> <span class="mi">3493</span>
+<span class="n">CONFIG_SGA_DLT_IP</span> <span class="o">=</span> <span class="s1">&#39;169.254.4.10&#39;</span>
+<span class="n">CONFIG_HPA_DLT_IP</span> <span class="o">=</span> <span class="s1">&#39;169.254.4.10&#39;</span>
+<span class="n">CONFIG_TCA_DLT_IP</span> <span class="o">=</span> <span class="s1">&#39;169.254.4.10&#39;</span>
+<span class="n">CONFIG_DHU_DLT_IP</span> <span class="o">=</span> <span class="s1">&#39;169.254.4.10&#39;</span>
+
+
+<div class="viewcode-block" id="Dumper"><a class="viewcode-back" href="../../../conx_cli_tools/components.html#conx_cli_tools.robot.update_vars_file.Dumper">[docs]</a><span class="k">class</span> <span class="nc">Dumper</span><span class="p">(</span><span class="n">yaml</span><span class="o">.</span><span class="n">Dumper</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Dumper to ensure correct indentation</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Dumper.increase_indent"><a class="viewcode-back" href="../../../conx_cli_tools/components.html#conx_cli_tools.robot.update_vars_file.Dumper.increase_indent">[docs]</a>    <span class="k">def</span> <span class="nf">increase_indent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">flow</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>  <span class="c1"># pylint: disable=W1113, W0613</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Increase indentation</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">increase_indent</span><span class="p">(</span><span class="n">flow</span><span class="o">=</span><span class="n">flow</span><span class="p">,</span> <span class="n">indentless</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="load_vars"><a class="viewcode-back" href="../../../conx_cli_tools/components.html#conx_cli_tools.robot.update_vars_file.load_vars">[docs]</a><span class="k">def</span> <span class="nf">load_vars</span><span class="p">(</span><span class="n">path_to_vars_file</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Load the variables from file</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path_to_vars_file</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">stream</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">variables</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">Loader</span><span class="o">=</span><span class="n">yaml</span><span class="o">.</span><span class="n">Loader</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">yaml</span><span class="o">.</span><span class="n">YAMLError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">exc</span><span class="p">)</span>
+            <span class="n">variables</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">if</span> <span class="n">variables</span><span class="p">:</span>
+        <span class="n">variables</span><span class="p">[</span><span class="s1">&#39;DIAGNOSTICS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">variables</span><span class="p">[</span><span class="s1">&#39;DIAGNOSTICS&#39;</span><span class="p">][</span><span class="s1">&#39;IP&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;resource_metadata_config_sga_dlt_ip&#39;</span><span class="p">,</span> <span class="n">CONFIG_SGA_DLT_IP</span><span class="p">)</span>
+        <span class="n">variables</span><span class="p">[</span><span class="s1">&#39;ETH_SWITCH_IP&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;resource_metadata_config_eth_switch_ip&#39;</span><span class="p">,</span> <span class="n">CONFIG_ETH_SWITCH_IP</span><span class="p">)</span>
+        <span class="n">variables</span><span class="p">[</span><span class="s1">&#39;CANOE&#39;</span><span class="p">][</span><span class="s1">&#39;CONFIG_DIRECTORY&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="n">variables</span><span class="p">[</span><span class="s1">&#39;ALIARO&#39;</span><span class="p">][</span><span class="s1">&#39;ALIARO_IP&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;resource_metadata_config_aliaro_ip&#39;</span><span class="p">,</span> <span class="n">CONFIG_ALIARO_IP</span><span class="p">)</span>
+        <span class="n">physical_ecus</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;resource_metadata_physical_ecus&#39;</span><span class="p">,</span> <span class="n">PHYSICAL_ECUS</span><span class="p">)</span>
+        <span class="n">variables</span><span class="p">[</span><span class="s1">&#39;PHYSICAL_ECUS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">physical_ecus</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">physical_ecus</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="k">else</span> <span class="n">physical_ecus</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">physical_ecus</span><span class="p">)</span>
+        <span class="n">variables</span><span class="p">[</span><span class="s1">&#39;SERIAL_PORTS&#39;</span><span class="p">][</span><span class="s1">&#39;DHUH_COM_PORT&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">variables</span><span class="p">[</span><span class="s1">&#39;SERIAL_PORTS&#39;</span><span class="p">][</span><span class="s1">&#39;DHUH_COM_PORT&#39;</span><span class="p">][</span><span class="s1">&#39;port&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;resource_metadata_config_dhuh_com_port&#39;</span><span class="p">,</span> <span class="n">CONFIG_DHUH_COM_PORT</span><span class="p">)</span>
+        <span class="n">variables</span><span class="p">[</span><span class="s1">&#39;SERIAL_PORTS&#39;</span><span class="p">][</span><span class="s1">&#39;DHUM_COM_PORT&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">variables</span><span class="p">[</span><span class="s1">&#39;SERIAL_PORTS&#39;</span><span class="p">][</span><span class="s1">&#39;DHUM_COM_PORT&#39;</span><span class="p">][</span><span class="s1">&#39;port&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;resource_metadata_config_dhum_com_port&#39;</span><span class="p">,</span> <span class="n">CONFIG_DHUM_COM_PORT</span><span class="p">)</span>
+        <span class="n">variables</span><span class="p">[</span><span class="s1">&#39;SERIAL_PORTS&#39;</span><span class="p">][</span><span class="s1">&#39;DHUM_COM_PORT&#39;</span><span class="p">][</span><span class="s1">&#39;write&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;resource_metadata_config_dhum_com_write&#39;</span><span class="p">,</span> <span class="n">CONFIG_DHUM_COM_PORT</span><span class="p">)</span>
+
+        <span class="n">variables</span><span class="p">[</span><span class="s1">&#39;DLT_HOSTS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;SGA_DLT&#39;</span><span class="p">:</span> <span class="p">{},</span> <span class="s1">&#39;HPA_DLT&#39;</span><span class="p">:</span> <span class="p">{},</span> <span class="s1">&#39;DHU_DLT&#39;</span><span class="p">:</span> <span class="p">{},</span>
+                                  <span class="s1">&#39;TCA_DLT&#39;</span><span class="p">:</span> <span class="p">{}}</span>
+        <span class="n">variables</span><span class="p">[</span><span class="s1">&#39;DLT_HOSTS&#39;</span><span class="p">][</span><span class="s1">&#39;SGA_DLT&#39;</span><span class="p">][</span><span class="s1">&#39;ip&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;resource_metadata_config_sga_dlt_ip&#39;</span><span class="p">,</span> <span class="n">CONFIG_SGA_DLT_IP</span><span class="p">)</span>
+        <span class="n">variables</span><span class="p">[</span><span class="s1">&#39;DLT_HOSTS&#39;</span><span class="p">][</span><span class="s1">&#39;SGA_DLT&#39;</span><span class="p">][</span><span class="s1">&#39;port&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;resource_metadata_config_sga_dlt_port&#39;</span><span class="p">,</span> <span class="n">CONFIG_SGA_DLT_PORT</span><span class="p">)</span>
+        <span class="n">variables</span><span class="p">[</span><span class="s1">&#39;DLT_HOSTS&#39;</span><span class="p">][</span><span class="s1">&#39;HPA_DLT&#39;</span><span class="p">][</span><span class="s1">&#39;ip&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;resource_metadata_config_hpa_dlt_ip&#39;</span><span class="p">,</span> <span class="n">CONFIG_HPA_DLT_IP</span><span class="p">)</span>
+        <span class="n">variables</span><span class="p">[</span><span class="s1">&#39;DLT_HOSTS&#39;</span><span class="p">][</span><span class="s1">&#39;HPA_DLT&#39;</span><span class="p">][</span><span class="s1">&#39;port&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;resource_metadata_config_hpa_dlt_port&#39;</span><span class="p">,</span> <span class="n">CONFIG_HPA_DLT_PORT</span><span class="p">)</span>
+        <span class="n">variables</span><span class="p">[</span><span class="s1">&#39;DLT_HOSTS&#39;</span><span class="p">][</span><span class="s1">&#39;DHU_DLT&#39;</span><span class="p">][</span><span class="s1">&#39;ip&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;resource_metadata_config_dhu_dlt_ip&#39;</span><span class="p">,</span> <span class="n">CONFIG_DHU_DLT_IP</span><span class="p">)</span>
+        <span class="n">variables</span><span class="p">[</span><span class="s1">&#39;DLT_HOSTS&#39;</span><span class="p">][</span><span class="s1">&#39;DHU_DLT&#39;</span><span class="p">][</span><span class="s1">&#39;port&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;resource_metadata_config_dhu_dlt_port&#39;</span><span class="p">,</span> <span class="n">CONFIG_DHU_DLT_PORT</span><span class="p">)</span>
+        <span class="n">variables</span><span class="p">[</span><span class="s1">&#39;DLT_HOSTS&#39;</span><span class="p">][</span><span class="s1">&#39;TCA_DLT&#39;</span><span class="p">][</span><span class="s1">&#39;ip&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;resource_metadata_config_tca_dlt_ip&#39;</span><span class="p">,</span> <span class="n">CONFIG_TCA_DLT_IP</span><span class="p">)</span>
+        <span class="n">variables</span><span class="p">[</span><span class="s1">&#39;DLT_HOSTS&#39;</span><span class="p">][</span><span class="s1">&#39;TCA_DLT&#39;</span><span class="p">][</span><span class="s1">&#39;port&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;resource_metadata_config_tca_dlt_port&#39;</span><span class="p">,</span> <span class="n">CONFIG_TCA_DLT_PORT</span><span class="p">)</span>
+        <span class="n">variables</span><span class="p">[</span><span class="s1">&#39;LOG_FOLDER&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;result_folder&quot;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()),</span> <span class="s1">&#39;robot_client&#39;</span><span class="p">,</span> <span class="s1">&#39;logs&#39;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">del</span> <span class="n">variables</span><span class="p">[</span><span class="s1">&#39;SERIAL_PORTS&#39;</span><span class="p">][</span><span class="s1">&#39;IHU_VIP_COM_PORT&#39;</span><span class="p">]</span>
+            <span class="k">del</span> <span class="n">variables</span><span class="p">[</span><span class="s1">&#39;SERIAL_PORTS&#39;</span><span class="p">][</span><span class="s1">&#39;IHU_MP_COM_PORT&#39;</span><span class="p">]</span>
+            <span class="k">del</span> <span class="n">variables</span><span class="p">[</span><span class="s1">&#39;SERIAL_PORTS&#39;</span><span class="p">][</span><span class="s1">&#39;TCAM_COM_PORT&#39;</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path_to_vars_file</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">stream</span><span class="p">:</span>
+            <span class="n">yaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">variables</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">,</span> <span class="n">Dumper</span><span class="o">=</span><span class="n">Dumper</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+                      <span class="n">sort_keys</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">file_path</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You must specify path to vars.yml&#39;</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">load_vars</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022 – Volvo Cars.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
